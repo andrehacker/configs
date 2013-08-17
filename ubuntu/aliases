@@ -21,6 +21,12 @@ alias gitrr='git rm -r'
 
 alias hls='hadoop fs -ls'
 
+alias sshcloud7='ssh ahacker@cloud-7.dima.tu-berlin.de'
+
+#alias mvnpackage='mvn -Dmaven.test.skip=true clean package'
+alias mvnpackage='mvn -DskipTests clean package'
+# -Dmaven.test.skip will not run and not compile the test classes
+# -DskipTests will compile the testcases, but not run them
 
 # PATH Extension
 
@@ -33,10 +39,10 @@ if [ ! -d "$JAVA_HOME" ]; then
   export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64
 fi
 
-export HADOOP_PREFIX=/home/andre/dev/hadoop/hadoop-1_0_4
+#export HADOOP_PREFIX=/home/andre/dev/hadoop/hadoop-1_0_4
 
 # just needed to fix a bug where hadoop cannot find the user name
-export HADOOP_USER_NAME=andre
+#export HADOOP_USER_NAME=andre
 
 export MAHOUT_HOME=/home/andre/dev/mahout/trunk
 
@@ -46,9 +52,11 @@ export HIVE_HOME=/home/andre/dev/hive/hive-0.10.0
 
 export MAHOUT_HOME=/home/andre/dev/mahout/mahout-distribution-0.7
 
-export STRATOSPHERE_HOME=/home/andre/dev/stratosphere/stratosphere-0.2
+#export STRATOSPHERE_HOME=/home/andre/dev/stratosphere/stratosphere-0.2
+#export OZONE_HOME=/home/andre/dev/ozone-repo/stratosphere-dist/target/stratosphere-dist-0.2-ozone-bin.dir/stratosphere-0.2-ozone
 
-export M2_HOME=/home/andre/dev/maven_2_2_1
+#export M2_HOME=/home/andre/dev/maven_2_2_1
+export M2_HOME=/home/andre/dev/maven_3_1_0
 
 export SCALA_HOME=/opt/scala/scala-2.10.2
 
